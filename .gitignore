@@ -1,1 +1,3 @@
 base/*
+project/protected
+project/protected/*
