@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="x-ua-compatible" content="ie=edge">
+ <title>HTML5 Syntax | Web Frontend Development</title>
+ <meta name="description" content="A description of four syntax conventions for writing HTML5 markup for CIT 230">
+ <meta name="viewport" content="width=device-width">
+ <link rel="stylesheet" href="../css/solarized-light.css" type="text/css" media="screen">
+ <link rel="stylesheet" href="../css/course.min.css" type="text/css" media="screen">
+</head>
+
+<body>
+ <div id="main">
+  <header id="header">
+   <img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+  </header>
+  <main>
+   <article id="article">
+    <h1>HTML5 Syntax</h1>
+    <h2>Definition</h2>
+    <p>Syntax refers to how we write HTML5 markup. This is not the same as <b>semantics</b>, which is choosing the correct elements to use to structure the content of the page.</p>
+    <h2>Best Practice</h2>
+    <p>HTML5 syntax, according to the W3.org, is a jumbled mess that basically indicates that HTML5 can be written any number of ways. The problem is that the code that you write more often than not will end up being viewed and possibly used by someone else. When code is messy, it is also hard to understand and maintain. Therefore, rather than using the W3.org recommendation, we will use "convention" instead. Remember that "convention" means the way most people do it (see <a href="https://www.impressivewebs.com/html5-syntax-style/" title="Article opens in a new tab" target="_blank">Louis Lazaris' article</a> on this topic). This is also referred to as <b>"best practice</b>".</p>
+    <h2>Four Syntax Rules</h2>
+    <ol>
+     <li>All elements and attributes are lowercase.</li>
+     <li>All attribute values are quoted.</li>
+     <li>All elements are closed.</li>
+     <li>Elements close in proper order.</li>
+    </ol>
+    <h2>An Explanation</h2>
+    <h3>Elements and attributes are lowercase</h3>
+    <code class="html">
+                &lt;a href="/homework/plan.html" title="View the planning file"&gt;Plan&lt;/a&gt;
+                </code>
+    <p>Notice how the "a", "href" and "title" are all lowercase? The "a" (or anchor) is the element name and is part of both the opening and closing tags. The "href" and "title" are attributes. They describe the anchor element. By writing them all lowercase, it makes writing the code easier and helps avoid mistakes by capitalizing something and not capitalizing something else. It helps your code be consistent.</p>
+    <h3>Attribute values are quoted</h3>
+    <code class="html">
+                &lt;a href="/homework/plan.html" title="View the planning file"&gt;Plan&lt;/a&gt;
+                </code>
+    <p>If you look closely at the path used with the "href" attribute and the sentence used in the "title" attribute you will see that both are enclosed in quotes. It doesn't matter if the quotes are double (") or single('). By surrounding the values with quotation marks it makes it clear that these are values of the attributes.</p>
+    <h3>Elements are closed</h3>
+    <p>There are two types of elements in HTML5 - <b>non-empty</b> and <b>void</b>. Depending on which kind is being used, they close (are ended) in different ways.</p>
+    <h4>Non-empty</h4>
+    <p>Most HTML elements are non-empty. This means they have an opening tag and a closing tag with content between the two. Look at this example:</p>
+    <code class="html">
+                &lt;a href="/homework/plan.html" title="View the planning file"&gt;<b>Plan</b>&lt;/a&gt;
+                </code>
+    <p>The word "Plan" is the content placed between the opening and closing tags. The closing tag closes the element.</p>
+    <h4>Void</h4>
+    <p>A void element contains no content and thus does not need a closing tag. It consists only of an opening tag. HTML5 only has 15 of these [<i>area, base, br, col, command, embed, hr, img, input,
+keygen, link, meta, param, source, track, wbr</i>] and most are seldom used. The "br", "link", "hr", "img" and "input" are the most common. Consider the examples below:</p>
+    <code class="html">
+                &lt;img src="/images/map.jpg" alt="An image of the planning site map"&gt;<br><br>
+                &lt;meta charset="UTF-8"&gt;
+                </code>
+    <p>Note how neither has a closing tag and there is no content outside of the element. In XHTML it was common to include a forward slash "/" at the end of the element just prior to the greater than symbol "&gt;". In HTML5, the slash is not required and is discouraged. In this case the greater than symbol "&gt;" closes the element.</p>
+    <h3>Elements close in proper order</h3>
+    <p>When building a web page and the content within the page it is common to be opening and closing elements throughout the file. This rule means that those elements must close in the same order as they open.</p>
+    <p>The rule of thumb is <q>First in, last out.</q> Look at the following example:</p>
+    <code class="html">
+                &lt;p&gt;&lt;b&gt;Halt!&lt;/b&gt; The guard shouted. &lt;q&gt;Who goes there?&lt;/q&gt;&lt;/p&gt;
+                </code>
+    <p>You notice that there is a lot of markup in this short passage. But, notice that the "p" opens first and closes last. The "b" opens next but closes after the word "halt". The quote opens before the challenge of "Who goes there?" and closes immediately after. This demonstrates that elements have to open and close in their proper order. Any other order would result in errors being generated.</p>
+    <h2>Summary</h2>
+    <p>By following these four simple syntax rules when writing your HTML markup, your code will be easier to write and read, easier to maintain and put you in the company of thousands of developers who follow best practice.</p>
+   </article>
+  </main>
+  <footer id="footer">
+   <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="//blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+ </div>
+ <script src="../js/course.min.js"></script>
+ <script src="../js/highlight.pack.js"></script>
+ <script>
+  // <![CDATA[
+  hljs.initHighlightingOnLoad();
+  // ]]>
+ </script>
+</body>
+
+</html>
