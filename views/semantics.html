@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="x-ua-compatible" content="ie=edge">
+ <title>HTML5 Semantics | Web Frontend Development</title>
+ <meta name="description" content="HTML5 Semantics introduced for CIT 230">
+ <meta name="viewport" content="width=device-width">
+ <link rel="stylesheet" href="../css/course.min.css">
+</head>
+
+<body>
+ <div id="main">
+  <header id="header">
+   <img src="../images/smallbanner.jpg" alt="CIT 230 Course Banner">
+  </header>
+  <main>
+   <article id="article">
+    <h1>HTML5 Semantics</h1>
+
+    <h2>HTML5 what?</h2>
+    <p>Semantics! Yes, I realize this isn't a common word, but it means everything (by the way, that is a pun and it was intentional). In his article, <a href="//html5doctor.com/lets-talk-about-semantics/" target="_blank" title="Opens in a new tab">Let's Talk about Semantics</a>, Mike Robinson defines semantics as "Semantics are the implied meaning of a subject, like a word or sentence."</p>
+
+    <p>When we refer to HTML semantics we are talking about using the HTML element that describes the content that will be placed inside of it. For example, if you see &lt;nav&gt; you should be able to tell that inside of it will be navigation links. Likewise, if you see &lt;ul&gt; you can expect to find a list of items that are all equal and don't need to be in any particular order. That's semantics.</p>
+
+    <p>HTML5 introduced a large number of new elements, and each is meant to describe the type of content you would place inside of the element. Below are two lists of different elements, the first describes structural elements (those that add structure to a web page - think walls in a house to create rooms) and the second describes content elements (those that actually hold the content of the page).</p>
+
+    <h2>Structural Elements</h2>
+    <p>&lt;<a href="//docs.webplatform.org/wiki/html/elements/header" target="_blank" title="read about the header element">header</a>&gt;
+     <br> &lt;<a href="//docs.webplatform.org/wiki/html/elements/nav" target="_blank" title="read about the nav element">nav</a>&gt;
+     <br> &lt;<a href="//docs.webplatform.org/wiki/html/elements/main" target="_blank" title="read about the main element">main</a>&gt;
+     <br> &lt;<a href="//docs.webplatform.org/wiki/html/elements/aside" target="_blank" title="read about the aside element">aside</a>&gt;
+     <br> &lt;<a href="//docs.webplatform.org/wiki/html/elements/footer" target="_blank" title="read about the footer element">footer</a>&gt;
+     <br> &lt;<a href="//docs.webplatform.org/wiki/html/elements/article" target="_blank" title="read about the article element">article</a>&gt;
+     <br> &lt;<a href="//docs.webplatform.org/wiki/html/elements/section" target="_blank" title="read about the section element">section</a>&gt;
+     <br> &lt;<a href="//docs.webplatform.org/wiki/html/elements/address" target="_blank" title="read about the address element">address</a>&gt;
+     <br> &lt;<a href="//docs.webplatform.org/wiki/html/elements/div" target="_blank" title="read about the div element">div</a>&gt;</p>
+
+    <h2>Content Elements</h2>
+    <p>&lt;h1&gt; through &lt;h6&gt;
+     <br> &lt;p&gt;
+     <br> &lt;figure&gt;
+     <br> &lt;img&gt;
+     <br> &lt;a&gt;
+     <br> &lt;ul&gt;
+     <br> &lt;ol&gt;
+     <br> &lt;li&gt;
+     <br> &lt;dl&gt;
+     <br> &lt;dt&gt;
+     <br> &lt;dd&gt;
+     <br> &lt;table&gt;
+     <br> &lt;tr&gt;
+     <br> &lt;td&gt;
+     <br> &lt;th&gt;
+     <br> &lt;cite&gt;
+     <br> &lt;blockquote&gt;
+     <br> &lt;b&gt;
+     <br> &lt;i&gt;
+     <br> &lt;strong&gt;
+     <br> &lt;span&gt;</p>
+
+    <h2>No Semantic Meaning</h2>
+    <p>If you have ever driven a standard transmission car you know that the clutch disengages the gears. It doesn't make the car go forward, nor does it make the car go backwards. It causes it to continue in the direction it is already headed. Thus, the clutch is a "non-gear", it has no meaning in terms of a direction.</p>
+    <p>You should note that the last item in the Structural Elements list is <strong>&lt;div&gt;</strong>, and the last element in the Content Elements list is <strong>&lt;span&gt;</strong>. <strong>These two elements have no semantic meaning!</strong> They are completely neutral. <em>Why have them you may ask</em>? The answer is that from time to time, we need an element that doesn't have any meaning in order to change its appearance or put around two or more other elements in order to imply proximity. They can be useful, but should be our element of last resort.</p>
+
+    <h2>The Flowchart</h2>
+    <p>Carefully review the <a href="../downloads/h5d-sectioning-flowchart.pdf" title="HTML5 Sections Flowchart" target="_blank">HTML5 Sections Flowchart</a> (PDF) to help you understand how to choose which element to use with the content.</p>
+
+    <h2>Automatically Accessible for Assistive Technology</h2>
+    <p>What does that heading mean? When a site visitor requests your web page and they are using a screen reader or another similar device, using semantic structures actually tells the device where to look in the markup for particular types of content (e.g. the navigation bar or the main content). We don't have to add additional markup, just the semantic elements. This idea is more fully explained in this short article - <a href="//www.paciellogroup.com/blog/2015/09/easy-content-organisation-with-html5/" target="_blank" title="Opens in a new tab">https://www.paciellogroup.com/blog/2015/09/easy-content-organisation-with-html5/</a>. I encourage you to take 10 minutes and read it.</p>
+    <h2>Be Semantic</h2>
+    <p>As you apply semantic elements to your web pages, it makes the pages easier for humans to read (as they look at your code) and easier for computer software (it knows where to look for the content it is searching for), for example all of the content of the page should be in the &lt;main&gt; element.</p>
+   </article>
+  </main>
+  <footer id="footer">
+   <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> All materials (except as noted) are by <a href="//blainerobertson.net">Blaine Robertson</a> and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+ </div>
+ <script src="../js/course.min.js"></script>
+</body>
+
+</html>
