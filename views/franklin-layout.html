@@ -123,17 +123,17 @@ selector {<br>
         </ol>
        </div>
       </section>
-      <p>How did you do? If you got all of them great job! If you got all but e. and g., again great job! Those two in particular are not very apparent if you haven't done something like this before.</p>
+      <p>How did you do? If you got all of them great job! If you got all but e. and f., again great job! Those two in particular are not very apparent if you haven't done something like this before.</p>
 
       <div class="callout">
        <p>If I had come to you with the screenshot above and said "Make the right side look like the left" and then walked away, how would you have reacted? I would imagine in the class the reactions would have ranged from confidence to terror! Taken as a whole moving from the one to the other is a bit much to contemplate. The exercise that you did where you broke down the large task into as small of steps as you could is called critical or analytical thinking or problem solving. This is a valuable (critical) skill in just about every field. </p>
-       <p>Making a list as we have will normally take a problem that might appear beyond our abilities and turn it into something we can imagine ourselves doing. Look at the top item in the list: "Move the 'Local Weather' to the right" Is that something that you know how to do? Is it something that you could figure out how to do? I would say yes.</p>
+       <p>Making a list as we have will normally take a problem that might appear beyond our abilities and turn it into something we can imagine ourselves doing. Look at the top item in the list: "Make the site name larger and bolder." Is that something that you know how to do? Is it something that you could figure out how to do? I would say yes.</p>
        <p>I would encourage you to approach all of your assignments this way. Start by figuring out in plain language what needs to happen, then translate those steps into HTML/CSS/JS. If you make your steps small enough, the translation of each step is often very easy. </p>
        <p>"...by small and simple things are great things brought to pass;" Alma 37:6</p>
       </div>
      </li>
      <li>
-      <p>Armed with our list we can now start working on the items. We will start together, and leave the remainder for you to finish up. Lets start with <b>main</b> portion of our page...items g, h and i.</p>
+      <p>Armed with our list we can now start working on the items. We will start together, and leave the remainder for you to finish up. Lets start with <b>main</b> portion of our page...items g and h.</p>
       <p class="callout">Anytime I see the terms "flow" and "horizontal" or "vertical" I immediately think of flexbox. <a href="//css-tricks.com/snippets/css/a-guide-to-flexbox/" title="Opens in a new tab" target="_blank">CSS Flexbox</a> is a layout technique that is also great for responsive design (we will talk about it in-depth later in the course). Those types of things are <em>exactly</em> what flexbox was designed for. If you review that link above you will see that at the core of flexbox is the concepts of parent/child, and axis. The first step when using flexbox is to identify the elements we want to move...then find their immediate parent. We will begin implementing flexbox here, but fully explain it later (Be like Adam and take a leap of faith at this point - Moses 5:6).</p>
       <p>My HTML looks like this for that portion of the page:</p>
       <code class="html">
@@ -148,16 +148,16 @@ selector {<br>
        &nbsp;...<br>
        &nbsp;&lt;/section&gt;<br>
 &lt;/main&gt;
-                        </code>
+      </code>
       <p>The elements we want to make sure are flowing vertically are the <b>section</b>s that most of our content is in. The parent of those elements is <b>main</b>. That will be our flex parent. If we add the following to our css it will turn flexbox "on" for the children of <b>main</b>:</p>
       <code class="css">
 main {<br>
     &nbsp;display: flex;<br>
 }
-                        </code>
+      </code>
       <div class="callout">
        <p>After adding that last line you may have noticed that the elements that <em>were</em> flowing vertically like we wanted are now flowing <em>horizontally</em>! That's not much of an improvement. Why turn on flexbox at all if it's going to cause problems for us...</p>
-       <p>The reason is item i in our list above. It wants us to make sure all of the elements in the main portion of the page are centered. Flexbox has excellent alignment controls that we will want to take advantage of. Not to mention, if you refer back to the <a href="/230v2/images/planning/large-wireframe.jpeg" target="_blank">large wireframe</a> eventually we are going to need to switch these elements back and forth from column to row based on the width of the browser. Flexbox will make that really easy. </p>
+       <p>The reason is item h. in our list above. It wants us to make sure all of the elements in the main portion of the page are centered. Flexbox has excellent alignment controls that we will want to take advantage of. Not to mention, if you refer back to the <a href="/230v2/images/planning/large-wireframe.jpeg" target="_blank">large wireframe</a> eventually we are going to need to switch these elements back and forth from column to row based on the width of the browser. Flexbox will make that really easy. </p>
 
       </div>
       <p>We can switch the flow back to vertical and center those elements with 2 more lines of CSS. My rule ended up like this:</p>
@@ -168,17 +168,17 @@ main {<br>
  &nbsp;align-items: center;<br>
 }
                         </code>
-      <p>Two down, the rest to go.</p>
+      <p>Two down, more to go.</p>
      </li>
      <li>
-      <p>Lets tackle the navigation next, items c, d, e, and f.</p>
+      <p>Lets tackle the navigation next, items b, c, d and e.</p>
       <p>Notice that "c" mentions "flow" again. Probably another good time for flexbox. Again we need to identify the things we are trying to move, then find their parent. In this case we need to move the list items that hold our links. So our flex parent will be the <b>ul</b>. Try adding the following rule:</p>
       <code class="css">
 ul {<br>
     &nbsp;display: flex;<br>
     &nbsp;list-style: none;<br>
 }
-                        </code>
+      </code>
       <div class="callout">
        <p>What happened? The list of links should have switched to a horizontal flow...but we have a potential problem. Our selector said change <em>all</em> unordered lists...and it did. But, we may not want <b>all</b> unordered lists to do this. We need to be more specific so that only the unordered lists that we want change and not all of them.</p>
        <p>Take a minute to review this <a href="//www.w3schools.com/cssref/css_selectors.asp" target="_blank">selector list</a> do you see anything there that might let us select the <strong>nav</strong> list but <strong>not</strong> all lists?</p>
@@ -193,7 +193,7 @@ ul {<br>
     left: 0;
     right: 0;
 }</code></pre>
-      <p>Basically that tells the element to use the fixed positioning, and to have the left edge of the element on the left side of the screen (left:0), the right edge of the element on the right side of the screen, and the bottom edge of the element on the bottom of the screen. Try taking off the left and right properties to see what happens. Or change the 0 to some value.</p>
+      <p>Basically that tells the element to use the fixed positioning, and to have the left edge of the element on the left side of the screen (left: 0), the right edge of the element on the right side of the screen, and the bottom edge of the element on the bottom of the screen. Try taking off the left and right properties to see what happens. Or, change the 0 to another value.</p>
      </li>
 
      <li>
@@ -231,7 +231,7 @@ ul {<br>
      <li>
       <p>We have now worked through most of our list...there are a few items left for you. Complete the layout of the Franklin weather page by completing the rest of the list items.</p>
      </li>
-     <li>Validate your page. Make sure to check both the HTML <strong>and</strong> CSS now. The easiest way to do this would be to use the Developer tools you installed in the first week. Fix <strong>all</strong> errors.</li>
+     <li>Validate your page. Make sure to check both the HTML <strong>and</strong> CSS now. The easiest way to do this would be to use the Developer tools you installed in the second week. Fix <strong>all</strong> errors.</li>
      <li>Make sure the link on your temporary homepage to this page is still working properly. Then make sure to commit and sync your work in Github Desktop. Check your URL (should look like githubusername.github.io) to make sure all of your changes show, and to check that your images all work.</li>
     </ol>
     <h2>Grading Matrix</h2>
