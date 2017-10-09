@@ -92,9 +92,9 @@ selector {<br>
       <p>The next step is to connect our CSS to our HTML. This is done with the <b>&lt;link&gt;</b> tag. If you used my boilerplate from last week you should have one already...if not you will need to add it now.</p>
       <p>The tag should look something like this:</p>
       <code class="html">
-&lt;link rel="stylesheet" type="text/css" href="screen.css" &gt;
+&lt;link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen"&gt;
                         </code>
-      <p>Add this line if you don't have it yet in the <b>&lt;head&gt;</b> portion of your page now. The <b>href="screen.css"</b> would indicate that I have a stylesheet called "screen.css" in the same directory as the HTML file I am working on that I would like to link. If your file is <strong>not</strong> called "screen.css" change that to whatever you named your file. If you chose to create a directory to store all your css in (very common practice) and your css file is in the directory, you will need to add that your path.</p>
+      <p>Add this line if you don't have it yet in the <b>&lt;head&gt;</b> portion of your page now. The <b>href="screen.css"</b> would indicate that I have a stylesheet called "screen.css" in the css directory. If your file is <strong>not</strong> called "screen.css" change that to whatever you named your file. If you don't have a directory to store all your css in (very common practice) then do so and move your css file into the directory. Once having done so, adjust your path to make sure the css is being read.</p>
       <div class="callout">
        <p>Check your page now in the browser. If everything is linked up correctly you should see a <em>lovely</em> salmon background on your page. :) If your background is still white, something went wrong and it's time for a bit of troubleshooting.</p>
        <p>The first thing to check is that your CSS is linking correctly with your HTML. Open up the browser developer tools console. (alt+cmd+J on the Mac in chrome or ctrl+shift+J on Windows. <a href="//support.google.com/chrome/answer/157179?hl=en" target="_blank">Chrome keyboard shortcuts</a>, or you can right-click and "inspect element" then click on the Console tab) </p>
