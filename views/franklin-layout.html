@@ -36,7 +36,7 @@
     <h2>Tasks</h2>
     <ol>
      <li>Review the <a href="/230v2/images/planning/small-wireframe.jpeg" target="_blank">small</a> wireframe to remind yourself of how it should look...where the different elements are in relation to each other. Keep it handy as we will be referring back to it often.</li>
-     <li>Create a new file in your editor and save it in the weather folder with a name that keeps in mind the <a href="//blainerobertson.github.io/230d2l/resources/naming.html" target="_blank">naming rules</a> we talked about earlier. This new file will <strong>not</strong> end with <b>.html</b> however. This time we need a <b>.css</b> extention on the file. I often name my primary stylesheet something like <b>screen.css</b> if it is intended to style a page meant for a screened device.
+     <li>Create a new file in your editor and save it in the css folder (this could be in your main site or in the weather folder) with a name that keeps in mind the <a href="//blainerobertson.github.io/230d2l/resources/naming.html" target="_blank">naming rules</a> we talked about earlier. This new file will <strong>not</strong> end with <b>.html</b> however. This time we need a <b>.css</b> extention on the file. I often name my primary stylesheet something like <b>screen.css</b> if it is intended to style a page meant for a screened device.
       <div class="callout">
        <h3>File extensions</h3>
        <p>So what is up with these very particular rules for naming these files? Last week we needed a <b>.html</b>, this week requires a <b>.css</b>. These multi-character additions to our filenames are called extensions and are used by the operating system to identify the file type.</p>
@@ -81,22 +81,22 @@ selector {<br>
     &nbsp;property: value;<br>
 }
                         </code>
-       <p>that was in the reading repeated 3 times. The top selector is one you may not have seen before. It is called the universal selector and will select <em>every</em> element on the page. It should be used carefully, but in this case in is necessary to switch how our browser <a href="//css-tricks.com/box-sizing/" title="Open link in a new tab" target="_blank">calculates width</a>.</p>
+       <p>that was in the reading repeated 3 times. The top selector is one you may not have seen before. It is called the universal selector and will select <em>every</em> element on the page. It should be used carefully, but in this case it is necessary to switch how our browser <a href="//css-tricks.com/box-sizing/" title="Open link in a new tab" target="_blank">calculates width</a>.</p>
        <p>You may now have two "body" selectors: one for the helvetica font and the second to remove the default margins and padding. If so, combine the rules into one and delete the other one. We only want a single CSS rule for the body.</p>
        <p>The next rule is a 'just in case' sort of thing. Older browsers won't recognize the HTML5 semantic elements, so this rule gives them a bit of guidance so that our page does not break.</p>
-       <p>The third rule removes any margin and padding from the <b>body</b> element. If we don't do this sometimes you will get an small gap around your page that might not be desirable. The <b>background-color:</b> is just there so that we can tell if things are working. We will remove it later.</p>
+       <p>The third rule removes any margin and padding from the <b>body</b> element. If we don't do this sometimes you will get an small gap around your page that might not be desirable.</p>
        <p>If the code above looks <em>completely</em> confusing to you then make sure to revisit your notes or the readings from this unit...and you should also seek out some help as well. <a href="//www.w3schools.com/css/default.asp" title="Opens in a new tab" target="_blank">W3schools</a> again has a good CSS tutorial. If the code above troubles you spend some time working through the first 3-4 sections of that tutorial.</p>
       </div>
      </li>
      <li>
-      <p>The next step is to connect our CSS to our HTML. This is done with the <b>&lt;link&gt;</b> tag. If you used my boilerplate from last week you should have one already...if not you will need to add it now.</p>
+      <p>The next step is to connect our CSS to our HTML. This is done with the <b>&lt;link&gt;</b> element.</p>
       <p>The tag should look something like this:</p>
       <code class="html">
 &lt;link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen"&gt;
                         </code>
       <p>Add this line if you don't have it yet in the <b>&lt;head&gt;</b> portion of your page now. The <b>href="screen.css"</b> would indicate that I have a stylesheet called "screen.css" in the css directory. If your file is <strong>not</strong> called "screen.css" change that to whatever you named your file. If you don't have a directory to store all your css in (very common practice) then do so and move your css file into the directory. Once having done so, adjust your path to make sure the css is being read.</p>
       <div class="callout">
-       <p>Check your page now in the browser. If everything is linked up correctly you should see a <em>lovely</em> salmon background on your page. :) If your background is still white, something went wrong and it's time for a bit of troubleshooting.</p>
+       <p>Check your page now in the browser. If everything is linked up correctly you should see most of the text flush against the left side of the browser window. If not, something went wrong and it's time for a bit of troubleshooting.</p>
        <p>The first thing to check is that your CSS is linking correctly with your HTML. Open up the browser developer tools console. (alt+cmd+J on the Mac in chrome or ctrl+shift+J on Windows. <a href="//support.google.com/chrome/answer/157179?hl=en" target="_blank">Chrome keyboard shortcuts</a>, or you can right-click and "inspect element" then click on the Console tab) </p>
        <p>Do you see any errors? If you see a "Failed to load resource" error it means the browser cannot find your css file...check the path in the <b>href</b> attribute of the <b>link</b> element.</p>
        <p>If you don't see any errors in the console then you probably have an error <em>in</em> your css. Validate!</p>
@@ -112,13 +112,14 @@ selector {<br>
         <ol>
          <li>Make the "Weather Site" name larger and bolder. Perhaps give it some space to the left. Hmmm, maybe center it vertically to the logo?</li>
          <li>Remove the bullets from the list of links and remove the default padding from the list.</li>
-         <li>Make the links flow horizontally, and take up an equal amount of space each</li>
-         <li>Correct the height on the navigation bar </li>
+         <li>Make the links flow horizontally, and take up an equal amount of space each.</li>
+         <li>Correct the height on the navigation bar. </li>
          <li>Move the navigation bar to the bottom.</li>
-         <li>Add a bit of space on the bottom of the page so that the footer is not hidden by the navigation bar</li>
-         <li>Make sure that the main blocks that make up our page flow vertically</li>
-         <li>Make sure the main blocks that make up our page are centered</li>
+         <li>Add a bit of space on the bottom of the page so that the footer is not hidden by the navigation bar.</li>
+         <li>Make sure that the main blocks that make up our page flow vertically.</li>
+         <li>Make sure the main blocks that make up our page are centered, but not the text inside of them.</li>
          <li>Make the current condition summary icon and high/low flow horizontally, with each one on the right edge and one on the left edge</li>
+         <li>Hide the bullets for the other data and have the content sit to the right of the labels.</li>
         </ol>
        </div>
       </section>
