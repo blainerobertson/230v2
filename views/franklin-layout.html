@@ -72,7 +72,6 @@
        body {<br>
        &nbsp;margin: 0;  /* remove any margin from body */<br>
        &nbsp;padding: 0;  /* ditto for padding  */<br>
-       &nbsp;background-color: salmon;<br>
        }<br>
                     </code>
       <div class="callout">
@@ -83,6 +82,7 @@ selector {<br>
 }
                         </code>
        <p>that was in the reading repeated 3 times. The top selector is one you may not have seen before. It is called the universal selector and will select <em>every</em> element on the page. It should be used carefully, but in this case in is necessary to switch how our browser <a href="//css-tricks.com/box-sizing/" title="Open link in a new tab" target="_blank">calculates width</a>.</p>
+       <p>You may now have two "body" selectors: one for the helvetica font and the second to remove the default margins and padding. If so, combine the rules into one and delete the other one. We only want a single CSS rule for the body.</p>
        <p>The next rule is a 'just in case' sort of thing. Older browsers won't recognize the HTML5 semantic elements, so this rule gives them a bit of guidance so that our page does not break.</p>
        <p>The third rule removes any margin and padding from the <b>body</b> element. If we don't do this sometimes you will get an small gap around your page that might not be desirable. The <b>background-color:</b> is just there so that we can tell if things are working. We will remove it later.</p>
        <p>If the code above looks <em>completely</em> confusing to you then make sure to revisit your notes or the readings from this unit...and you should also seek out some help as well. <a href="//www.w3schools.com/css/default.asp" title="Opens in a new tab" target="_blank">W3schools</a> again has a good CSS tutorial. If the code above troubles you spend some time working through the first 3-4 sections of that tutorial.</p>
