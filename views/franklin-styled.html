@@ -25,7 +25,7 @@
 
     <h2>Tasks</h2>
     <ol>
-     <li>Review the <a href="/230v2/images/planning/small-wireframe.jpeg" title="Opens in a new tab" target="_blank">small</a> wireframe to remind yourself of how it should look...compare it to what our page currently looks like. Keep it handy as we will be referring back to it often.</li>
+     <li>Review the <a href="../images/planning/small-wireframe.jpeg" title="Opens in a new tab" target="_blank">small</a> wireframe to remind yourself of how it should look...compare it to what our page currently looks like. Keep it handy as we will be referring back to it often.</li>
      <li><p>Refer to the style guide that was in the planning document received earlier as well. It will give you a better idea about the final goal we are shooting for with our design.</p>
 
       <div class="callout">
@@ -47,9 +47,9 @@
         <li>Style the content boxes based on the image and styles given in the style guide.</li>
         <li>Adjust font colors as needed to maintain readability</li>
         <li>Adjust padding/margins as needed to match wireframe.</li>
-        <li>Add @media queries to allow the layout to respond to large screens and change to match the large wireframe.</li>
+        <li>Use flexbox and add @media queries to allow the layout to respond to large screens and change to match the large wireframe.</li>
        </ol></div></section>
-      <p>How did you do?  You might look at that last item in my list and say: 'seriously?'  I didn't do a very good job at breaking that down into steps.  It actually deserves it's own list.  We'll do that below...lets take care of the rest of the list first.</p>
+      <p>How did you do? You might look at that last item in my list and say: 'seriously?'  I didn't do a very good job at breaking that down into steps.  It actually deserves it's own list.  We'll take a look at it as the last item in this activity...lets take care of the rest of the list first.</p>
      </li>
      <li><p>Lets add some details. Refer to the style guide and find the portion on typography. Notice that fonts were specified for both headings and body text.  Lets change those now.</p>
       <p>Font is governed by the <a href="//www.w3schools.com/cssref/pr_font_font-family.asp" title="Opens in a new tab" target="_blank"><b>font-family</b></a> property. Notice in the example on that site that they have 3 fonts listed. This is for redundancy in case the browser cannot find the first choice. Fonts are listed in order of: preferred font, second choice, generic font family.</p>
@@ -59,9 +59,9 @@
        <p>If you go back and look at that link for <a href="//www.w3schools.com/cssref/pr_font_font-family.asp" title="Opens in a new tab" target="_blank"><b>font-family</b></a> again scroll down just a bit and you will find a table with information about the property...the one we are looking for starts with "Default value". Right after that you see "Inherited: yes".  Some CSS properties only apply to the element to which they are applied.  Other elements (like font-family) will be applied to the element to which they are attached, and <em>all of it's descendents</em>. So if we want all of our text to use a certain font, we could apply it at the <b>body</b>, and since everything is inside that element, everything will inherit that font!</p>
       </div>
       <p>You should already have a rule for <b>body</b>. Modify it as needed to make sure it specified "helvetica" as the font to be used.</p>
-      <p>Make another rule in your css that will apply the heading font to all heading, if you don't already have this rule.</p>
+      <p>Make another rule in your css that will apply the heading font to all headings, if you don't already have this rule.</p>
       <div class="callout">
-       <p>The style guide only gave us one font for our headlines!  We need to find one more font that is somewhat similar to the desired font to add to our list. The best would be if you can find one of the <a href="//www.w3schools.com/cssref/css_websafe_fonts.asp" title="Opens in a new tab" target="_blank">web safe fonts</a> to use as our second choice. Then choose the best fit from the generic font families for the 3rd choice: cursive, fantasy, mono-space, serif, sans-serif.</p>
+       <p>The style guide only gave us one font for our headings!  We need to find one more font that is somewhat similar to the desired font to add to our list. The best would be if you can find one of the <a href="//www.w3schools.com/cssref/css_websafe_fonts.asp" title="Opens in a new tab" target="_blank">web safe fonts</a> to use as our second choice. Then choose the best fit from the generic font families for the 3rd choice: cursive, fantasy, mono-space, serif, sans-serif.</p>
        <p>One other problem, what should we use for the selector if we want to change all headings?  Whenever you have the same styles you want applied to more than one selector you can use a "compound selector". That means you can create a list of comma separated selectors and then write the declarations to apply to all of the selectors...like this:</p>
 
        <pre><code class="css">h1,
@@ -124,7 +124,7 @@ background-size: cover;</code></pre>
 
      <li>
       <p>The style guide shows a very specific styling for the content boxes on the page.  It included this image:</p>
-      <img src="/230v2/images/content-box.jpeg" alt="ui example">
+      <img src="../images/content-box.jpeg" alt="ui example">
       <p>It also included the styles you will need to make something look like that: </p>
       <pre><code class="css">background-color: rgba(200,200,200,.6);
 margin: .2em auto;
