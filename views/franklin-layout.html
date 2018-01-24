@@ -35,8 +35,8 @@
     </div>
     <h2>Tasks</h2>
     <ol>
-     <li>Review the <a href="../images/planning/small-wireframe.jpeg" target="_blank">small</a> wireframe to remind yourself of how it should look...where the different elements are in relation to each other. Keep it handy as we will be referring back to it often.</li>
-     <li>Create a new file in your editor and save it in the css folder (this could be in your main site or in the weather folder) with a name that keeps in mind the <a href="naming.html" target="_blank">naming rules</a> we talked about earlier. This new file will <strong>not</strong> end with <b>.html</b> however. This time we need a <b>.css</b> extention on the file. I often name my primary stylesheet something like <b>screen.css</b> if it is intended to style a page meant for a screened device.
+     <li>Review the <a href="../downloads/franklin-small.png" target="_blank">small wireframe</a> to remind yourself of how it should look...where the different elements are in relation to each other. Keep it handy as we will be referring back to it often.</li>
+     <li>Create a new file in your editor and save it in the css folder of the weather folder (Don't have one? Create it.) with a name that keeps in mind the <a href="naming.html" target="_blank">naming rules</a> we talked about earlier. This new file will <strong>not</strong> end with <b>.html</b> however. This time we need a <b>.css</b> extention on the file. I often name my primary stylesheet something like <b>screen.css</b> if it is intended to style a page meant for a screened device.
       <div class="callout">
        <h3>File extensions</h3>
        <p>So what is up with these very particular rules for naming these files? Last week we needed a <b>.html</b>, this week requires a <b>.css</b>. These multi-character additions to our filenames are called extensions and are used by the operating system to identify the file type.</p>
@@ -92,7 +92,7 @@ selector {<br>
       <p>The next step is to connect our CSS to our HTML. This is done with the <b>&lt;link&gt;</b> element.</p>
       <p>The tag should look something like this:</p>
       <code class="html">
-&lt;link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen"&gt;
+&lt;link rel="stylesheet" type="text/css" href="/weather/css/screen.css" media="screen"&gt;
                         </code>
       <p>Add this line if you don't have it yet in the <b>&lt;head&gt;</b> portion of your page now. The <b>href="screen.css"</b> would indicate that I have a stylesheet called "screen.css" in the css directory. If your file is <strong>not</strong> called "screen.css" change that to whatever you named your file. If you don't have a directory to store all your css in (very common practice) then do so and move your css file into the directory. Once having done so, adjust your path to make sure the css is being read.</p>
       <div class="callout">
@@ -103,18 +103,19 @@ selector {<br>
       </div>
      </li>
      <li>
-      <p>Now we are ready to start adding CSS to layout our page. Before we can do that however we need to know <em>what</em> exactly needs to be done. Pull up your franklin html page in the browser and set it to a mobile size...then pull up the <a href="../images/planning/small-wireframe.jpeg" target="_blank">small wireframe</a> next to it so you can compare. This is what I see:<br>
+      <p>Now we are ready to start adding CSS to layout our page. Before we can do that however we need to know <em>what</em> exactly needs to be done. Pull up your franklin html page in the browser and set it to a mobile size...then pull up the <a href="../downloads/franklin-small.png" target="_blank">small wireframe</a> next to it so you can compare. This is what I see:<br>
        <img src="../images/franklin-wireframe-and-html.png" alt="Franklin comparison of the unstyled HTML and the small wireframe"></p>
-      <p>Take a few minutes and make a list of all of the changes that you see that need to happen...the steps to get from right to left. Be as specific as you can. Once you have made your list click below and compare your list with mine. Don't peek until <strong>after</strong> you make your list!</p>
+      <p>Take a few minutes and make a list of all of the changes that you see that need to happen...the steps to get from the right side to the left side in the image. Be as specific as you can. Once you have made your list click below and compare your list with mine. Don't peek until <strong>after</strong> you make your list!</p>
       <section class="hint"><input type="checkbox"><i></i>
        <h3>To Do</h3>
        <div>
         <ol>
-         <li>Make the "Weather Site" name larger and bolder. Perhaps give it some space to the left. Hmmm, maybe center it vertically to the logo?</li>
+         <li>Make the logo larger.</li>
+         <li>Make "The Weather Site" name larger and bolder. Put it on the same line as the logo. Perhaps give it some space to the left. Hmmm, maybe center it vertically to the logo?</li>
          <li>Remove the bullets from the list of links and remove the default padding from the list.</li>
          <li>Make the links flow horizontally, and take up an equal amount of space each.</li>
          <li>Correct the height on the navigation bar. </li>
-         <li>Move the navigation bar to the bottom.</li>
+         <li>Move the navigation bar to the bottom and replace the words with icons. How do I do that?</li>
          <li>Add a bit of space on the bottom of the page so that the footer is not hidden by the navigation bar.</li>
          <li>Make sure that the main blocks that make up our page flow vertically.</li>
          <li>Make sure the main blocks that make up our page are centered, but not the text inside of them.</li>
@@ -123,7 +124,7 @@ selector {<br>
         </ol>
        </div>
       </section>
-      <p>How did you do? If you got all of them great job! If you got all but e. and f., again great job! Those two in particular are not very apparent if you haven't done something like this before.</p>
+      <p>How did you do? If you got all of them great job! If not, don't feel bad, this is a lot of work to get things looking the way we want.</p>
 
       <div class="callout">
        <p>If I had come to you with the screenshot above and said "Make the right side look like the left" and then walked away, how would you have reacted? I would imagine in the class the reactions would have ranged from confidence to terror! Taken as a whole moving from the one to the other is a bit much to contemplate. The exercise that you did where you broke down the large task into as small of steps as you could is called critical or analytical thinking or problem solving. This is a valuable (critical) skill in just about every field. </p>
