@@ -116,11 +116,12 @@ selector {<br>
          <li>Make the links flow horizontally, and take up an equal amount of space each.</li>
          <li>Correct the height on the navigation bar. </li>
          <li>Move the navigation bar to the bottom and replace the words with icons. How do I do that?</li>
-         <li>Add a bit of space on the bottom of the page so that the footer is not hidden by the navigation bar.</li>
+         <li>Add a bit of space on the bottom of the page so that the footer is not hidden by the navigation bar, even though you can't see the footer in the wireframe.</li>
          <li>Make sure that the main blocks that make up our page flow vertically.</li>
          <li>Make sure the main blocks that make up our page are centered, but not the text inside of them.</li>
-         <li>Make the current condition summary icon and high/low flow horizontally, with each one on the right edge and one on the left edge</li>
-         <li>Hide the bullets for the other data and have the content sit to the right of the labels.</li>
+         <li>Add rounded corners to the content blocks (called "tiles").</li>
+         <li>Hide the headings inside the content tiles.</li>
+         <li>Hide the bullets for the other data and format the data to match the wireframe.</li>
         </ol>
        </div>
       </section>
@@ -128,30 +129,45 @@ selector {<br>
 
       <div class="callout">
        <p>If I had come to you with the screenshot above and said "Make the right side look like the left" and then walked away, how would you have reacted? I would imagine in the class the reactions would have ranged from confidence to terror! Taken as a whole moving from the one to the other is a bit much to contemplate. The exercise that you did where you broke down the large task into as small of steps as you could is called critical or analytical thinking or problem solving. This is a valuable (critical) skill in just about every field. </p>
-       <p>Making a list as we have will normally take a problem that might appear beyond our abilities and turn it into something we can imagine ourselves doing. Look at the top item in the list: "Make the site name larger and bolder." Is that something that you know how to do? Is it something that you could figure out how to do? I would say yes.</p>
+       <p>Making a list as we have will normally take a problem that might appear beyond our abilities and turn it into something we can imagine ourselves doing. Look at the top two items in the list: "Make the icon bigger" and "Make the site name larger and bolder." Is that something that you know how to do? Is it something that you could figure out how to do? I would say yes.</p>
        <p>I would encourage you to approach all of your assignments this way. Start by figuring out in plain language what needs to happen, then translate those steps into HTML/CSS/JS. If you make your steps small enough, the translation of each step is often very easy. </p>
        <p>"...by small and simple things are great things brought to pass;" Alma 37:6</p>
       </div>
      </li>
      <li>
-      <p>Armed with our list we can now start working on the items. We will start together, and leave the remainder for you to finish up. Lets start with <b>main</b> portion of our page...items g and h.</p>
+      <p>Armed with our list we can now start working on the items. We will start together, and leave the remainder for you to finish up. Lets start with <b>main</b> portion of our page...items h and i.</p>
 <!--      <p class="callout">Anytime I see the terms "flow" and "horizontal" or "vertical" I immediately think of flexbox. <a href="//css-tricks.com/snippets/css/a-guide-to-flexbox/" title="Opens in a new tab" target="_blank">CSS Flexbox</a> is a layout technique that is also great for responsive design (we will talk about it in-depth later in the course). Those types of things are <em>exactly</em> what flexbox was designed for. If you review that link above you will see that at the core of flexbox is the concepts of parent/child, and axis. The first step when using flexbox is to identify the elements we want to move...then find their immediate parent. We will begin implementing flexbox here, but fully explain it later (Be like Adam and take a leap of faith at this point - Moses 5:6).</p>-->
       <p>My HTML looks like this for that portion of the page:</p>
-      <code class="html">
-&lt;main&gt;<br>
-       &nbsp;&lt;section class="overview"&gt;<br>
-       &nbsp;...<br>
-       &nbsp;&lt;/section&gt;<br>
-       &nbsp;&lt;section class="cur_conditions"&gt;<br>
-       &nbsp;...<br>
-       &nbsp;&lt;/section&gt;<br>
-       &nbsp;&lt;section class="hourly"&gt; &lt;!-- you may not have this section yet --&gt;<br>
-       &nbsp;...<br>
-       &nbsp;&lt;/section&gt;<br>
-&lt;/main&gt;
-      </code>
-      <p>The elements we want to make sure are flowing vertically are the <b>section</b>s that most of our content is in. The parent of those elements is <b>main</b>. Fortunately for us, the default behavior of section element is to "stack" vertically. Because of that we can checkoff item g. <!--  That will be our flex parent. If we add the following to our css it will turn flexbox "on" for the children of <b>main</b>:--></p>
-      <p>Getting them to be centered horizontally can be done, but we'll wait until next week, after you have been introduced to Flexbox, to do that. So, item h. is on hold for right now.</p>
+      <pre><code class="html">
+&lt;main&gt;
+  &lt;h1&gt;Franklin, Idaho&lt;/h1&gt;
+  &lt;ul&gt;
+   &lt;li&gt;Zip: 83237&lt;/li&gt;
+   &lt;li&gt;Elevation: 4501 ft.&lt;/li&gt;
+   &lt;li&gt;Location: 42.011902&deg; N -111.803757&deg; W&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;!-- weather-content holds weather data --&gt;
+  &lt;div id="weather-content"&gt;
+  &lt;!-- temp-wind holds temp and wind data --&gt;
+  &lt;div id="temp-wind"&gt;
+   &lt;h2&gt;Temperature&lt;/h2&gt;
+   &lt;section id="temp"&gt;
+   ...
+   &lt;/section&gt;
+   &lt;h2&gt;Wind&lt;/h2&gt;
+    &lt;section id="wind"&gt;
+     ...
+    &lt;/section&gt;
+   &lt;h2&gt;Video Forecast&lt;/h2&gt;
+    &lt;section id="vforecast"&gt;
+     ...
+    &lt;/section&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/main&gt;
+      </code></pre>
+      <p>The elements we want to make sure are flowing vertically are the <b>section</b>s that most of our content is in. The parent of all of our content is <b>main</b>. Fortunately for us, the default behavior of section element is to "stack" vertically. Because of that we can checkoff item h. <!--  That will be our flex parent. If we add the following to our css it will turn flexbox "on" for the children of <b>main</b>:--></p>
+      <p>Getting them to be centered horizontally can be done, but we'll wait until next week, after you have been introduced to Flexbox, to do that. So, item i. is on hold for right now.</p>
 <!--
       <code class="css">
 main {<br>
@@ -175,7 +191,7 @@ main {<br>
 -->
      </li>
      <li>
-      <p>Lets tackle the navigation next, items b, c, d and e.</p>
+      <p>Lets tackle some of the navigation items next, items c, d, e and g.</p>
 <!--      <p>Notice that "c" mentions "flow" again. Probably another good time for flexbox. Again we need to identify the things we are trying to move, then find their parent. In this case we need to move the list items that hold our links. So our flex parent will be the <b>ul</b>. Try adding the following rule:</p>-->
       <p>We can write two lines of CSS to address two of our tasks. Try adding the following rule:</p>
       <code class="css">
@@ -199,16 +215,20 @@ ul li {<br>
 }</code></pre>
       <p>Basically that tells the element to use the fixed positioning, and to have the left edge of the element on the left side of the screen (left: 0) and the bottom edge of the element on the bottom of the screen. Try taking off the left property to see what happens. Or, change the 0 to another value.</p>
      </li>
+     <li>
+      <p>Finally, let's add that space so when we scroll down we can still see the footer even though the navigation bar is at the bottom of the screen.</p>
+     <pre><code class="css">main{
+  margin-bottom: 2em;
+}</code></pre>
+     </li>
 
      <li>
-      <p>The first item in the list deal with the title at the top. The first thing we should do here is to make sure that our HTML is structured correctly. We can save ourselves a lot of time and effort by doing this. My HTML for that portion of the page looks like this:</p>
-<code class="html">
-&lt;header id="page-header"&gt;<br>
- &nbsp;&lt;img src="/images/plan-images/logo.jpeg" alt="Weather Site Logo"&gt;<br>
- &lt;span class="site-name"&gt;Weather Site&lt;/span&gt;<br>
-&lt;/header&gt;
-                    </code>
-      <p>I needed some way of controlling this header and differentiating it from other headers that may be added to the page later, so I added an <b>id</b> attribute with a value to the page's header, named <b>page-header</b>. I can now use that to write some CSS. First step above was to take our site name "Weather Site" and work with it. To control just this portion of the content I added a class to it. The span has no default values, just plain text. The rule might look like this:</p>
+      <p>The first items in the list deal with the logo and title at the top. The first thing we should do here is to make sure that our HTML is structured correctly. We can save ourselves a lot of time and effort by doing this. My HTML for that portion of the page looks like this:</p>
+<pre><code class="html">&lt;header id="page-header"&gt;
+  &lt;div id="logo"&gt;&amp;#9748;&lt;/div&gt;
+  &lt;p id="site-brand"&gt;The Weather Site&lt;/p&gt;
+ &lt;/header&gt;</code></pre>
+      <p>I needed some way of controlling this header and differentiating it from other headers that may be added to the page later, so I added an <b>id</b> attribute with a value to the page's header, named <b>page-header</b>. I can now use that to write some CSS. First step above was to take our site name "The Weather Site" and work with it. To control just this portion of the content I added a class to it. The span has no default values, just plain text. The rule might look like this:</p>
       <pre><code class="css">.site-name {
     font-size: 2em;
     font-weight: 600;
