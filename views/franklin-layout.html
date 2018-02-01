@@ -141,29 +141,27 @@ selector {<br>
       <pre><code class="html">
 &lt;main&gt;
   &lt;h1&gt;Franklin, Idaho&lt;/h1&gt;
-  &lt;ul&gt;
-   &lt;li&gt;Zip: 83237&lt;/li&gt;
-   &lt;li&gt;Elevation: 4501 ft.&lt;/li&gt;
-   &lt;li&gt;Location: 42.011902&deg; N -111.803757&deg; W&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;!-- weather-content holds weather data --&gt;
-  &lt;div id="weather-content"&gt;
-  &lt;!-- temp-wind holds temp and wind data --&gt;
-  &lt;div id="temp-wind"&gt;
-   &lt;h2&gt;Temperature&lt;/h2&gt;
-   &lt;section id="temp"&gt;
+  &lt;section id="locationInfo"&gt;
    ...
-   &lt;/section&gt;
-   &lt;h2&gt;Wind&lt;/h2&gt;
-    &lt;section id="wind"&gt;
-     ...
+  &lt;/section&gt;
+  &lt;!-- curWeather holds temps, wind and video data --&gt;
+  &lt;div id="curWeather"&gt;
+  &lt;!-- smallConditions holds temps, wind data --&gt;
+   &lt;div id="smallConditions"&gt;
+    &lt;section id="temps"&gt;
+    ...
     &lt;/section&gt;
-   &lt;h2&gt;Video Forecast&lt;/h2&gt;
-    &lt;section id="vforecast"&gt;
-     ...
+    &lt;section id="wind"&gt;
+    ...
     &lt;/section&gt;
    &lt;/div&gt;
+    &lt;section id="video"&gt;
+     ...
+    &lt;/section&gt;
   &lt;/div&gt;
+  &lt;section id="hourly"&gt;
+    ...
+    &lt;/section&gt;
  &lt;/main&gt;
       </code></pre>
       <p>The elements we want to make sure are flowing vertically are the <b>section</b>s that most of our content is in. The parent of all of our content is <b>main</b>. Fortunately for us, the default behavior of section element is to "stack" vertically. Because of that we can checkoff item h.
